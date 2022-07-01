@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>School Up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!-- #########################################
+    ##################Body#####################
+################################################# -->
+  <body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand ps-3" href="#" target="blank"
+        >School Up</a
+      >
+      <!-- #########################################
+    ##################SIDEBAR#####################
+################################################# -->
+      <button
+        class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+        id="sidebarToggle"
+        href="#!"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- #########################################
+    ##################NAVBAR SEARCH TOP#####################
+################################################# -->
+      <form
+        class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+      >
+        <div class="input-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Search for..."
+            aria-label="Search for..."
+            aria-describedby="btnNavbarSearch"
+          />
+          <button class="btn btn-primary" id="btnNavbarSearch" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+      <!-- #########################################
+    ##################ICON LOGIN TOP NAV#####################
+################################################# -->
+      <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><i class="fas fa-user fa-fw"></i
+          ></a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li><a class="dropdown-item" href="#!">Settings</a></li>
+            <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#!">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id="layoutSidenav">
+      <!-- #########################################
+    ##################SIDENAV#####################
+################################################# -->
+      <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <!-- #########################################
+    ##################DASHBOARD#####################
+################################################# -->
+              <a class="nav-link" href="index.html"> Dashboard </a>
+              <!-- #########################################
+    ##################OEC#####################
+################################################# -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOEC"
+                aria-expanded="false"
+                aria-controls="collapseOEC"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-folder"></i>
+                </div>
+                OEC
+                <div class="sb-sidenav-collapse-arrow">
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseOEC"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              >
+                <nav class="sb-sidenav-menu-nested nav">
+                  <a class="nav-link" href="morning-schools.html">Morning</a>
+                  <a class="nav-link" href="#">Afternoon</a>
+                  <a class="nav-link" href="#">Schedule</a>
+                  <a class="nav-link" href="#">Payment</a>
+                  <a class="nav-link" href="#">Bill</a>
+                  <a class="nav-link" href="#">Quotations & Invoices</a>
+                  <a class="nav-link" href="#">Direct Schools</a>
+                  <a class="nav-link" href="#">Lesson Fee & Direct Deposit</a>
+                  <a class="nav-link" href="#">Birthday Card</a>
+                  <a class="nav-link" href="#">Trial</a>
+                </nav>
+              </div>
+              <!-- #########################################
+    ##################E TECH LAB#####################
+################################################# -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseETL"
+                aria-expanded="false"
+                aria-controls="collapseETL"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-folder"></i>
+                </div>
+                E-Tech Lab
+                <div class="sb-sidenav-collapse-arrow">
+                  <!-- <i class="fas fa-angle-down"></i> -->
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseETL"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              ></div>
+              <!-- #########################################
+    ##################AET#####################
+################################################# -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseAET"
+                aria-expanded="false"
+                aria-controls="collapseAET"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-folder"></i>
+                </div>
+                AET
+                <div class="sb-sidenav-collapse-arrow">
+                  <!-- <i class="fas fa-angle-down"></i> -->
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseAET"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              ></div>
+              <!-- #########################################
+    ##################TSS#####################
+################################################# -->
+              <a
+                class="nav-link collapsed"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTSS"
+                aria-expanded="false"
+                aria-controls="collapseTSS"
+              >
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-folder"></i>
+                </div>
+                TSS
+                <div class="sb-sidenav-collapse-arrow">
+                  <!-- <i class="fas fa-angle-down"></i> -->
+                </div>
+              </a>
+              <div
+                class="collapse"
+                id="collapseTSS"
+                aria-labelledby="headingOne"
+                data-bs-parent="#sidenavAccordion"
+              ></div>
+            </div>
+            <!-- #########################################
+    ##################DASHBOARD#####################
+################################################# -->
+          </div>
+        </nav>
+      </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h1 class="mt-4">(School Name JAP) or (New School)</h1>
+            <!-- <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol> -->
+          </div>
+        </main>
+
+        <!-- #########################################
+    ##################SCHOOL DETAILS#####################
+################################################# -->
+        <div class="card-body">
+          <!-- first column -->
+          <div class="row d-flex justify-content-between">
+            <div class="col-xl-4 col-md-4 mt-4">
+              <div class="row">
+                <div class="d-inline-flex align-items-center mb-3">
+                  <div class="me-2"><strong>School Name</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="School Name..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-inline-flex align-items-center mb-3">
+                  <div class="me-2"><strong>Phone</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Phone..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="d-inline-flex align-items-center mb-3">
+                  <div class="me-2"><strong>Fax</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Fax..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- second column -->
+            <div class="col-xl-8 col-md-4">
+              <!-- first row second column comapny name and postcode -->
+              <div class="row">
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2"><strong>Company Name (JAP)</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Company Name (JAP)..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2"><strong>Postcode</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Postcode..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- addreses and google link -->
+              <!-- address 1 -->
+              <div class="col-sm-12 align-items-center mb-3">
+                <div class="me-2"><strong>Address 1 (JAP)</strong></div>
+                <form
+                  class="border border-dark rounded d-md-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                >
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Address 1 (JAP)..."
+                      aria-label="Search for..."
+                      aria-describedby="btnNavbarSearch"
+                    />
+                  </div>
+                </form>
+              </div>
+              <!-- address 2 -->
+              <div class="col-sm-12 align-items-center mb-3">
+                <div class="me-2"><strong>Address 2 (JAP)</strong></div>
+                <form
+                  class="border border-dark rounded d-md-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                >
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Address 2 (JAP)..."
+                      aria-label="Search for..."
+                      aria-describedby="btnNavbarSearch"
+                    />
+                  </div>
+                </form>
+              </div>
+              <!-- Google Link -->
+              <div class="col-sm-12 align-items-center mb-3">
+                <div class="me-2"><strong>Google Link URL</strong></div>
+                <form
+                  class="border border-dark rounded d-md-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                >
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Google Map URL..."
+                      aria-label="Search for..."
+                      aria-describedby="btnNavbarSearch"
+                    />
+                  </div>
+                </form>
+              </div>
+              <!-- 5th row second column closest station and bus -->
+              <div class="row">
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2"><strong>Closest Station (JAP)</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Closest Station (JAP)..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2">
+                    <strong>Closest Bus Station (JAP)</strong>
+                  </div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Closest Bus Station (JAP)..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- 6th row second column owner name and phone -->
+              <div class="row">
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2"><strong>Owner's Name (JAP)</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Owner's Name (JAP)..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2"><strong>Owner's Phone</strong></div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Owner's Phone..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- 7th row second column person in charge and number -->
+              <div class="row">
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2">
+                    <strong>Person in Charge (JAP)</strong>
+                  </div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Person in Charge (JAP)..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-sm-6 align-items-center mb-3">
+                  <div class="me-2">
+                    <strong>Person in Charge Number</strong>
+                  </div>
+                  <form
+                    class="border border-dark rounded d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"
+                  >
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Person in Charge Number..."
+                        aria-label="Search for..."
+                        aria-describedby="btnNavbarSearch"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #########################################
+    ##################DAY LIST CALENDAR#####################
+################################################# -->
+
+        <div class="card mb-4">
+          <div class="row d-flex justify-content-around">
+            <!-- first table -->
+            <div class="col-sm-4 align-items-center mb-3">
+              <div class="card-body table-responsive qtv">
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- second table -->
+            <div class="col-sm-4 align-items-center mb-3">
+              <div class="card-body table-responsive qtv">
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- thrid table -->
+            <div class="col-sm-4 align-items-center mb-3">
+              <div class="card-body table-responsive qtv">
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                    <tr>
+                      <td>OEC Teacher</td>
+                    </tr>
+                    <tr>
+                      <td>Day 1</td>
+                    </tr>
+                    <tr>
+                      <td>Day 2</td>
+                    </tr>
+                    <tr>
+                      <td>Day 3</td>
+                    </tr>
+                    <tr>
+                      <td>Day 4</td>
+                    </tr>
+                    <tr>
+                      <td>Day</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- #########################################
+    ##################FOOTER#####################
+################################################# -->
+
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid px-4">
+            <div
+              class="d-flex align-items-center justify-content-between small"
+            >
+              <div class="text-muted">Copyright &copy; Ocean 2022</div>
+              <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/datatables-simple-demo.js"></script>
+  </body>
+</html>
